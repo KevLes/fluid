@@ -1,0 +1,39 @@
+{
+  "name": "fluid-core",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "./libs/fluid-core/src",
+  "projectType": "library",
+  "generators": {
+    "@nxext/stencil:component": {
+      "style": "scss"
+    }
+  },
+  "tags": [],
+  "targets": {
+    "test": {
+      "executor": "@nxext/stencil:test",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "./libs/fluid-core/tsconfig.lib.json",
+        "configPath": "./libs/fluid-core/stencil.config.ts",
+        "outputPath": "dist/./libs/"
+      }
+    },
+    "build": {
+      "executor": "@nxext/stencil:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "configPath": "libs/fluid-core/stencil.config.ts",
+        "outputPath": "dist/libs/",
+        "nxBail": true
+      },
+      "configurations": {
+        "production": {
+          "configPath": "libs/fluid-core/stencil.config.ts"
+        }
+      }
+    }
+  }
+}

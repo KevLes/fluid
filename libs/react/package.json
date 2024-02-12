@@ -1,0 +1,20 @@
+{
+  "name": "@fluid/fluid-react",
+  "version": "0.0.1",
+  "sideEffect": false,
+  "peerDependencies": {
+    "@fluid/fluid-core": "0.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "types": "index.esm.d.ts",
+  "files": [
+    "src/",
+    "index.esm.d.ts",
+    "index.esm.js"
+  ],
+  "license": "MIT"
+}
